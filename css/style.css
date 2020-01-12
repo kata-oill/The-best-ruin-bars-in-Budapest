@@ -1,0 +1,27 @@
+/* --- CONTENERS  --- */
+html {
+  height: 100%; }
+
+body {
+  background-color: pink;
+  min-height: 100%;
+  margin: 0px;
+  padding: 0px;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box; }
+
+.center {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto; }
+/*# sourceMappingURL=style.css.map */
