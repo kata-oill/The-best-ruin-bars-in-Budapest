@@ -12,14 +12,6 @@
 <body>
 	<div class="main-container">
 		<h1>The best ruin bars in Budapest</h1>
-		<p>
-		  View:
-		  <a href="#carousel-cell1">Cell 1</a>,
-		  <a href="#carousel-cell2">Cell 2</a>,
-		  <a href="#carousel-cell3">Cell 3</a>,
-		  <a href="#carousel-cell4">Cell 4</a>,
-		  <a href="#carousel-cell5">Cell 5</a>
-		</p>
 		<!-- Flickity HTML init -->
 		<div class="carousel">
 		  	<div class="carousel-cell" id="carousel-cell1" style="background-image: url('http://4liberty.eu/wp-content/uploads/2018/11/170427150458-szimpla-kert.jpg');">
@@ -42,10 +34,13 @@
 		  		<div class="content-container"></div>
 		  	</div>
 		</div>
-		
+		<div class="progress-bar"></div>
+		<div class="button-group">
+			<button class="button" data-selector=".cell1">Reset</button>
+		</div>
 	</div>
-	<script type="text/javascript" src="./vendor/hash.js"></script>
 	<script type="text/javascript" src="./vendor/flickity.pkgd.min.js" ></script>
+	<script type="text/javascript" src="./vendor/hash.js"></script>
 	<script type="text/javascript" src="./js/script.js" ></script>
 </body>
 </html>
