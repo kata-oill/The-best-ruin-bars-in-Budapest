@@ -39,4 +39,9 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center; }
+
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: #333; }
 /*# sourceMappingURL=style.css.map */
