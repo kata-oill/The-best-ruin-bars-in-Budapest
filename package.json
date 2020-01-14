@@ -39,6 +39,7 @@
     "onchange": "^6.0.0"
   },
   "dependencies": {
+    "flickity-hash": "^1.0.3",
     "normalize.css": "^8.0.1"
   }
 }
