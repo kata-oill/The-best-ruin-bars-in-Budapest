@@ -44,6 +44,8 @@
 		<div class="button-group">
 			<button class="button" data-selector=".cell1">Reset</button>
 		</div>
+		<!--The div element for the map -->
+    	<div id="map"></div>
 	</div>
 	<script id="template-slide-carousel" type="x-tmpl-mustache">
 		<h2>{{title}}</h2>
@@ -73,5 +75,6 @@
 	<script type="text/javascript" src="./vendor/flickity.pkgd.min.js"></script>
 	<script type="text/javascript" src="./vendor/hash.js"></script>
 	<script type="text/javascript" src="./js/script.js" ></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6aYeBDwOEk4f01Gg1zuDd7sHULJjR_uQ&callback=initMap"></script>
 </body>
 </html>
