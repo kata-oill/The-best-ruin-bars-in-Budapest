@@ -1,13 +1,9 @@
 'use strict';
 // Google map
 
-var infos = document.getElementById('map-info');
-
 window.initMap = function() {
-	var simplaKert = {lat: 47.497023, lng: 19.063366};
-
- 	// The map, centered at Simpla Kert
- 	var map = new google.maps.Map(document.getElementById('map'), {zoom: 13, center: simplaKert});
+	// The map, centered at Simpla Kert
+ 	var map = new google.maps.Map(document.getElementById('map'), {zoom: 18, center: barList[0].coords});
 
  	// Add markers to the map
 	for(let i = 0; i < barList.length; i++){
