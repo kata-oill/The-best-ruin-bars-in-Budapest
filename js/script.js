@@ -1,4 +1,19 @@
 'use strict';
+// Google map
+
+var infos = document.getElementById('map-info');
+
+window.initMap = function() {
+	var simplaKert = {lat: 47.497023, lng: 19.063366};
+
+ 	// The map, centered at Simpla Kert
+ 	var map = new google.maps.Map(document.getElementById('map'), {zoom: 13, center: simplaKert});
+
+ 	// Add markers to the map
+	for(let i = 0; i < barList.length; i++){
+		var marker = new google.maps.Marker({position: barList[i].coords, map: map});
+	}
+}
 
 // Mustache template
 
@@ -9,12 +24,10 @@ Mustache.parse(templateSlide);
 var generateSlide = '';
 
 for(var i = 0; i < barList.length; i++){
-		console.log(barList);
-		generateSlide += Mustache.render(templateSlide, barList[i]);
+	generateSlide += Mustache.render(templateSlide, barList[i]);
 	}
 
 var results = document.querySelector('.carousel');
-
 
 results.insertAdjacentHTML('beforeend', generateSlide);
 
