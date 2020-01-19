@@ -4,11 +4,11 @@
 window.initMap = function() {
 
  	// The map, centered at Simpla Kert
- 	var map = new google.maps.Map(document.getElementById('map'), {zoom: 18, center: barList[0].coords});
+ 	window.map = new google.maps.Map(document.getElementById('map'), {zoom: 18, center: barList[0].coords});
 
  	// Add markers to the map
 	for(let i = 0; i < barList.length; i++){
-		var marker = new google.maps.Marker({position: barList[i].coords, map: map});
+		var marker = new google.maps.Marker({position: barList[i].coords, map: window.map});
 
 		marker.addListener('click', function (index){
 			var index = i;
@@ -39,8 +39,10 @@ var flkty = new Flickity( '.carousel', {
   hash: true,
   pageDots: false,
   groupCells: true,
+  change: true,
 });
 
+	// Function reset & move to the first slide
 
 var button = document.querySelector('.button');
 
@@ -49,9 +51,19 @@ button.addEventListener('click', function (index){
 	flkty.selectCell( index );
 });
 
+	// Function to show progress bar
+
 var progressBar = document.querySelector('.progress-bar')
 
 flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
   progressBar.style.width = progress * 100 + '%';
 });
+
+	// Change the map marker 
+
+flkty.on( 'change', function( index ) {
+	window.map.panTo(barList[index].coords);
+ });
+
+
