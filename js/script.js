@@ -1,3 +1,23 @@
+'use strict';
+
+// Mustache template
+
+var templateSlide = document.getElementById('template-slide-carousel').innerHTML;
+
+Mustache.parse(templateSlide);
+
+var generateSlide = '';
+
+for(var i = 0; i < barList.length; i++){
+		console.log(barList);
+		generateSlide += Mustache.render(templateSlide, barList[i]);
+	}
+
+var results = document.querySelector('.carousel');
+
+results.insertAdjacentHTML('beforeend', generateSlide);
+
+// Flickity carousel
 
 var flkty = new Flickity( '.carousel', {
   hash: true,
