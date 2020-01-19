@@ -5,14 +5,18 @@ var infos = document.getElementById('map-info');
 
 window.initMap = function() {
   // The locations
- 	var uluru = {lat: -25.344, lng: 131.036};
- 	var coords2 = {lat: -25.363, lng: 134.044};
- 	var coords3 = {lat: -25.363, lng: 137.044};
-  // The map, centered at Uluru
+ 	var simplaKert = {lat: 47.497023, lng: 19.063366};
+ 	var mazelTov = {lat: 47.500510, lng: 19.065503};
+ 	var redRuin = {lat: 47.491962, lng: 19.056170};
+ 	var fogasHaz = {lat: 47.500520, lng: 19.065355};
+ 	var durerKert = {lat: 47.509997, lng: 19.090048};
+
+  // The map, centered at Simpla Kert
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
+      document.getElementById('map'), {zoom: 13, center: simplaKert});
+
+  // The marker, positioned at Simpla Kert
+  var marker = new google.maps.Marker({position: simplaKert, map: map});
 }
 
 // Mustache template
