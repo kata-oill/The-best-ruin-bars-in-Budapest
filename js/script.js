@@ -15,6 +15,7 @@ for(var i = 0; i < barList.length; i++){
 
 var results = document.querySelector('.carousel');
 
+
 results.insertAdjacentHTML('beforeend', generateSlide);
 
 // Flickity carousel
