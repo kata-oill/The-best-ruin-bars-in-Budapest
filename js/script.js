@@ -5,9 +5,13 @@ var flkty = new Flickity( '.carousel', {
   groupCells: true,
 });
 
-var button = document.querySelector('button');
 
-button.addEventListener('click', function (index));
+var button = document.querySelector('.button');
+
+button.addEventListener('click', function (index){
+	var index = 0;
+	flkty.selectCell( index );
+});
 
 var progressBar = document.querySelector('.progress-bar')
 
