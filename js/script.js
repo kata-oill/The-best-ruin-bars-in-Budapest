@@ -2,12 +2,18 @@
 // Google map
 
 window.initMap = function() {
-	// The map, centered at Simpla Kert
+
+ 	// The map, centered at Simpla Kert
  	var map = new google.maps.Map(document.getElementById('map'), {zoom: 18, center: barList[0].coords});
 
  	// Add markers to the map
 	for(let i = 0; i < barList.length; i++){
 		var marker = new google.maps.Marker({position: barList[i].coords, map: map});
+
+		marker.addListener('click', function (index){
+			var index = i;
+			flkty.selectCell( index );
+		});
 	}
 }
 
