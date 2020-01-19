@@ -12,7 +12,14 @@ window.initMap = function() {
  	// Add markers to the map
 	for(let i = 0; i < barList.length; i++){
 		var marker = new google.maps.Marker({position: barList[i].coords, map: map});
+
+		marker.addListener('click', function (index){
+			var index = i;
+			flkty.selectCell( index );
+		});
 	}
+
+
 }
 
 // Mustache template
